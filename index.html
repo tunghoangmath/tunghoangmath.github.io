@@ -3,125 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Tung Hoang, PhD student in Mathematics at Tulane University. Research in number theory and arithmetic geometry.">
+  <meta name="description" content="Tung Hoang — PhD student in Mathematics at Tulane University, working in number theory and arithmetic geometry.">
   <meta name="theme-color" content="#f8f8f5">
-  <title>Tung Hoang | Mathematics</title>
-  <style>
-    :root {
-      --page: #f8f8f5;
-      --paper: #ffffff;
-      --ink: #1e2935;
-      --muted: #5f6c78;
-      --line: #dedfdb;
-      --navy: #183b53;
-      --navy-dark: #112b3e;
-      --accent: #936c47;
-      --soft: #eef1f0;
-      --max: 1060px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--page);
-      color: var(--ink);
-      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    a:hover { color: var(--accent); }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-    .skip-link { position: absolute; z-index: 20; top: -55px; left: 12px; padding: 9px 14px; background: #fff; }
-    .skip-link:focus { top: 12px; }
-    .container { width: min(var(--max), calc(100% - 56px)); margin-inline: auto; }
-    .topbar { background: var(--paper); border-bottom: 1px solid var(--line); }
-    .topbar-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; flex-direction: column; gap: 0; color: var(--ink); text-decoration: none; line-height: 1.35; flex-shrink: 0; }
-    .brand strong { font-family: Georgia, "Times New Roman", serif; font-size: 23px; letter-spacing: -.4px; font-weight: 600; }
-    .brand small { color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 650; }
-    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; column-gap: 21px; row-gap: 5px; }
-    nav a { color: #435260; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .1px; }
-    nav a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 6px; }
-    main { padding-bottom: 30px; }
-    .hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(240px, .85fr); gap: clamp(35px, 7vw, 90px); padding: 84px 0 86px; align-items: center; }
-    .eyebrow { margin: 0 0 16px; color: var(--accent); text-transform: uppercase; letter-spacing: 2.1px; font-size: 11px; font-weight: 750; }
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.65px; }
-    h1 { font-size: clamp(45px, 6.4vw, 75px); line-height: 1.08; margin: 0 0 21px; color: var(--navy-dark); }
-    .hero-lede { margin: 0 0 21px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(20px, 2.3vw, 25px); line-height: 1.47; color: #384e60; }
-    .intro { max-width: 640px; margin: 0; color: #465561; font-size: 16px; line-height: 1.9; }
-    .hero-actions { margin-top: 30px; display: flex; gap: 13px; flex-wrap: wrap; align-items: center; }
-    .button { display: inline-block; padding: 11px 18px; background: var(--navy); border: 1px solid var(--navy); border-radius: 4px; color: white; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: .1px; }
-    .button:hover { background: var(--navy-dark); color: #fff; }
-    .button-outline { color: var(--navy); background: transparent; }
-    .button-outline:hover { color: var(--navy-dark); background: #eef1ef; }
-    .portrait-panel { min-height: 328px; background: #e8edeb; border: 1px solid #d4dbd9; border-radius: 6px; position: relative; display: grid; place-items: center; overflow: hidden; }
-    .portrait-panel:before { content: ""; display: block; width: 260px; height: 260px; border: 1px solid rgba(22, 57, 78, .2); border-radius: 50%; position: absolute; top: -105px; right: -95px; }
-    .portrait-panel:after { content: ""; width: 235px; height: 235px; border: 1px solid rgba(22, 57, 78, .15); border-radius: 50%; position: absolute; bottom: -118px; left: -96px; }
-    .monogram { display: grid; place-items: center; width: 146px; height: 146px; border: 1px solid rgba(22, 57, 78, .25); border-radius: 50%; color: var(--navy); font-family: Georgia, serif; font-size: 57px; letter-spacing: -4px; background: rgba(255,255,255,.26); }
-    .portrait-caption { position: absolute; bottom: 19px; color: #54707a; font-size: 10px; font-weight: 650; letter-spacing: 2px; text-transform: uppercase; }
-    .section { padding: 62px 0 66px; border-top: 1px solid var(--line); scroll-margin-top: 22px; }
-    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
-    h2 { font-size: clamp(30px, 4vw, 38px); line-height: 1.25; color: var(--navy-dark); margin: 0; }
-    h3 { font-size: 22px; line-height: 1.3; color: var(--navy); margin: 0 0 7px; }
-    .section-number { color: #909a9f; font-size: 12px; letter-spacing: 1.2px; font-weight: 600; }
-    .section-intro { color: var(--muted); max-width: 750px; margin: 0 0 27px; }
-    .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-    .research-card { background: var(--paper); border: 1px solid var(--line); padding: 25px 24px 24px; border-radius: 5px; }
-    .research-card .number { display: block; margin-bottom: 27px; color: var(--accent); font-family: Georgia, serif; font-size: 15px; }
-    .research-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
-    .subsection { margin-top: 35px; padding-top: 28px; border-top: 1px solid var(--line); }
-    .subsection h3 { font-size: 23px; }
-    .placeholder { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
-    .split { display: grid; grid-template-columns: 230px 1fr; gap: 45px; }
-    .split .side-note { margin: 0; color: #8b969d; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; padding-top: 7px; }
-    .content p { margin: 0 0 17px; color: #52616e; }
-    .content p:last-child { margin-bottom: 0; }
-    .notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .note-card { background: #fdfdfc; border: 1px solid var(--line); padding: 25px 26px; border-radius: 5px; }
-    .note-card .type { display: block; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1.5px; margin-bottom: 13px; }
-    .note-card h3 { font-size: 21px; }
-    .note-card p { color: var(--muted); margin: 0; font-size: 14px; }
-    .cv-row { background: var(--paper); border: 1px solid var(--line); border-radius: 5px; padding: 24px 27px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .cv-row p { margin: 5px 0 0; color: var(--muted); }
-    footer { border-top: 1px solid var(--line); padding: 28px 0 38px; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    footer p { color: #697680; font-size: 12px; margin: 0; }
-    footer a { font-size: 12px; text-decoration: none; }
-    @media (max-width: 760px) {
-      .container { width: min(var(--max), calc(100% - 34px)); }
-      .topbar-inner { padding: 18px 0; flex-direction: column; align-items: flex-start; gap: 17px; }
-      nav { justify-content: flex-start; column-gap: 17px; }
-      .hero { padding: 52px 0 59px; grid-template-columns: 1fr; gap: 31px; }
-      .portrait-panel { min-height: 225px; }
-      .monogram { width: 105px; height: 105px; font-size: 44px; }
-      .research-grid, .notes-grid { grid-template-columns: 1fr; }
-      .split { grid-template-columns: 1fr; gap: 10px; }
-      .section { padding: 45px 0 49px; }
-      .cv-row { align-items: flex-start; flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    @media print { body { background: #fff; } nav, .hero-actions { display: none; } .section { break-inside: avoid; } }
-  </style>
+  <title>Home | Tung Hoang</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="topbar" id="home">
+  <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#home" aria-label="Tung Hoang, home">
+      <a class="brand" href="index.html" aria-label="Tung Hoang, home">
         <strong>Tung Hoang</strong>
         <small>Mathematics</small>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#talks">Talks</a>
-        <a href="#notes">Mathematical Notes</a>
-        <a href="#cv">CV</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="talks.html">Talks</a>
+        <a href="notes.html">Mathematical Notes</a>
+        <a href="cv.html">CV</a>
       </nav>
     </div>
   </header>
-
   <main id="main" class="container">
     <section class="hero" aria-labelledby="page-title">
       <div>
@@ -130,99 +34,31 @@
         <p class="hero-lede">PhD Student in Mathematics<br>Number Theory &amp; Arithmetic Geometry</p>
         <p class="intro">I am a PhD student in Mathematics at Tulane University. My research interests include elliptic curves, Selmer groups, modular forms, and arithmetic questions about number fields.</p>
         <div class="hero-actions">
-          <a class="button" href="#research">Explore my research</a>
-          <a class="button button-outline" href="#cv">Curriculum vitae</a>
+          <a class="button" href="research.html">Explore my research</a>
+          <a class="button button-outline" href="cv.html">Curriculum vitae</a>
         </div>
       </div>
-      <!-- This monogram can later be replaced with a photograph. -->
+      <!-- Replace the TH monogram with a portrait photograph when ready. -->
       <div class="portrait-panel" role="img" aria-label="Decorative TH monogram; portrait photograph to be added later">
         <div class="monogram" aria-hidden="true">TH</div>
         <span class="portrait-caption">Number theory · Arithmetic geometry</span>
       </div>
     </section>
-
-    <section id="research" class="section" aria-labelledby="research-title">
-      <div class="section-heading">
-        <h2 id="research-title">Research</h2><span class="section-number">01 / 05</span>
-      </div>
-      <p class="section-intro">My interests lie in number theory and arithmetic geometry, particularly where algebraic and analytic methods meet.</p>
-      <div class="research-grid">
-        <article class="research-card">
-          <span class="number">01</span>
-          <h3>Class numbers</h3>
-          <p>CM quadratic extensions, relative class numbers, and arithmetic properties of number fields.</p>
-        </article>
-        <article class="research-card">
-          <span class="number">02</span>
-          <h3>Elliptic curves</h3>
-          <p>Quadratic twists, Selmer groups, and related questions in arithmetic geometry.</p>
-        </article>
-        <article class="research-card">
-          <span class="number">03</span>
-          <h3>Modular forms</h3>
-          <p>Hilbert modular forms, half-integral weight forms, and their arithmetic applications.</p>
-        </article>
-      </div>
-      <div class="subsection">
-        <h3>Publications &amp; preprints</h3>
-        <p class="placeholder">Paper titles, coauthors, and arXiv or PDF links will be added here.</p>
-      </div>
-    </section>
-
-    <section id="teaching" class="section" aria-labelledby="teaching-title">
-      <div class="section-heading"><h2 id="teaching-title">Teaching</h2><span class="section-number">02 / 05</span></div>
-      <div class="split">
-        <p class="side-note">Courses &amp; materials</p>
-        <div class="content">
-          <p>This section will list courses, teaching experience, and selected learning materials.</p>
-          <p>Course titles and semesters can be added when ready.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="talks" class="section" aria-labelledby="talks-title">
-      <div class="section-heading"><h2 id="talks-title">Talks</h2><span class="section-number">03 / 05</span></div>
-      <div class="split">
-        <p class="side-note">Seminars &amp; conferences</p>
-        <div class="content">
-          <p>Selected seminar and conference talks will be listed here, together with slides or notes when available.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="notes" class="section" aria-labelledby="notes-title">
-      <div class="section-heading"><h2 id="notes-title">Mathematical Notes</h2><span class="section-number">04 / 05</span></div>
-      <p class="section-intro">A space for mathematical ideas, questions, short expository notes, and occasional connections with the philosophy of mathematics. Notes will be added gradually.</p>
-      <div class="notes-grid">
-        <article class="note-card">
-          <span class="type">Possible topic · not yet published</span>
-          <h3>Chebotarev and counting problems</h3>
-          <p>How splitting conditions on primes enter arithmetic counting arguments.</p>
-        </article>
-        <article class="note-card">
-          <span class="type">Possible topic · not yet published</span>
-          <h3>What makes a proof explanatory?</h3>
-          <p>A mathematical question with a natural philosophical dimension.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="cv" class="section" aria-labelledby="cv-title">
-      <div class="section-heading"><h2 id="cv-title">Curriculum Vitae</h2><span class="section-number">05 / 05</span></div>
-      <div class="cv-row">
-        <div>
-          <h3>Academic CV</h3>
-          <p>A PDF version of my curriculum vitae will be added here.</p>
-        </div>
-        <!-- When you upload your CV, replace this text with a link to cv.pdf. -->
+    <section class="section" aria-labelledby="overview-title">
+      <div class="section-heading"><h2 id="overview-title">Explore</h2></div>
+      <p class="section-intro">Research, talks, teaching, and notes on mathematical ideas.</p>
+      <div class="page-card-grid">
+        <a class="page-card" href="research.html"><h3>Research</h3><p>Number theory and arithmetic geometry, including current research interests and publications.</p><span class="card-action">View research →</span></a>
+        <a class="page-card" href="talks.html"><h3>Talks</h3><p>Seminars and conference presentations, with links to materials when available.</p><span class="card-action">View talks →</span></a>
+        <a class="page-card" href="teaching.html"><h3>Teaching</h3><p>Teaching experience, courses, and selected educational materials.</p><span class="card-action">View teaching →</span></a>
+        <a class="page-card" href="notes.html"><h3>Mathematical Notes</h3><p>Short expository notes, research questions, and connections to the philosophy of mathematics.</p><span class="card-action">Read notes →</span></a>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Tung Hoang · Tulane University</p>
-      <a href="https://github.com/tunghoangmath" rel="noopener noreferrer" target="_blank">GitHub profile</a>
+      <a href="https://github.com/tunghoangmath" target="_blank" rel="noopener noreferrer">GitHub profile</a>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
