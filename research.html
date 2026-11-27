@@ -1,77 +1,367 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Tung Hoang, PhD student in Mathematics at Tulane University.">
+  <meta name="description" content="Research in number theory and arithmetic geometry by Tùng Hoàng, PhD student in Mathematics at Tulane University.">
   <meta name="theme-color" content="#f8f8f5">
-  <title>Research | Tung Hoang</title>
+
+  <title>Research | Tùng Hoàng</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- MathJax for mathematical formulas -->
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+
+  <style>
+
+    /* Research banner */
+
+    .page-intro.research-hero {
+      background: #255C4E;
+      border-radius: 8px;
+      border: none;
+      padding: 26px 32px;
+      min-height: 240px;
+      max-width: none;
+      box-sizing: border-box;
+
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: 16px 28px;
+    }
+
+    /* Research heading */
+
+    .research-hero h1 {
+      color: #ffffff;
+      font-size: 46px;
+      line-height: 1.15;
+      margin: 10px 0 14px;
+    }
+
+    .research-hero .eyebrow {
+      color: #d0ded2;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .research-hero .lede {
+      color: #e5eee8;
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0;
+      max-width: 440px;
+    }
+
+    /* Mathematical formulas */
+
+    .research-formulas {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      gap: 12px 16px;
+
+      color: #b5cec0;
+      opacity: 0.78;
+      font-size: 15px;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .research-formula {
+      padding: 3px 0;
+      overflow-x: auto;
+    }
+
+    .research-formula.wide {
+      grid-column: 1 / -1;
+    }
+
+    /* Selmer–Tate–Shafarevich exact sequence */
+
+    .research-exact-sequence {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #b5cec0;
+      opacity: 0.78;
+      font-size: 15px;
+      padding-top: 8px;
+      overflow-x: auto;
+    }
+
+    .research-exact-sequence span {
+      display: block;
+      width: max-content;
+      min-width: 100%;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 760px) {
+
+      .page-intro.research-hero {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
+
+      .research-hero h1 {
+        font-size: 36px;
+      }
+
+      .research-hero .lede {
+        font-size: 15px;
+      }
+
+      .research-formulas {
+        font-size: 14px;
+        gap: 12px;
+      }
+
+      .research-exact-sequence {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+
+      .research-formulas {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
+
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="index.html" aria-label="Tung Hoang, home">
-        <strong>Tung Hoang</strong>
+
+      <a class="brand" href="index.html" aria-label="Tùng Hoàng, home">
+        <strong>Tùng Hoàng</strong>
         <small>Mathematics</small>
       </a>
+
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="research.html" aria-current="page">Research</a>
         <a href="teaching.html">Teaching</a>
         <a href="talks.html">Talks</a>
-        <a href="notes.html">Mathematical Notes</a>
+        <a href="notes.html">Notes &amp; Reflections</a>
         <a href="cv.html">CV</a>
       </nav>
+
     </div>
   </header>
+
   <main id="main" class="container subpage">
-    <section class="page-intro">
-      <p class="eyebrow">Mathematics</p>
-      <h1>Research</h1>
-      <p class="lede">My interests lie in number theory and arithmetic geometry, particularly where algebraic and analytic methods meet.</p>
-    </section>
-    <div class="page-body">
-      <section class="section-block" aria-labelledby="topics">
-        <h2 id="topics">Research interests</h2>
-        <div class="research-grid">
-          <article class="research-card"><span class="number">01</span><h3>Class numbers</h3><p>CM quadratic extensions, relative class numbers, and arithmetic properties of number fields.</p></article>
-          <article class="research-card"><span class="number">02</span><h3>Elliptic curves</h3><p>Quadratic twists, Selmer groups, and related questions in arithmetic geometry.</p></article>
-          <article class="research-card"><span class="number">03</span><h3>Modular forms</h3><p>Hilbert modular forms, half-integral weight forms, and their arithmetic applications.</p></article>
+
+    <!-- Research banner -->
+
+    <section class="page-intro research-hero">
+
+      <div>
+
+        <p class="eyebrow">
+          Number Theory &amp; Arithmetic Geometry
+        </p>
+
+        <h1>Research</h1>
+
+        <p class="lede">
+          My interests lie in number theory and arithmetic geometry,
+          particularly where algebraic and analytic methods meet.
+        </p>
+
+      </div>
+
+      <!-- Mathematical formulas -->
+
+      <div class="research-formulas">
+
+        <div class="research-formula">
+          \(
+            \displaystyle
+            h^-(K/F)=\frac{h(K)}{h(F)}
+          \)
         </div>
+
+        <div class="research-formula">
+          \(
+            v_p\bigl(h^-(K/F)\bigr)
+            \leq v_p(w)
+          \)
+        </div>
+
+        <div class="research-formula wide">
+          \(
+            \displaystyle
+            \mathcal E_R(z)=
+            \sum_{\substack{
+              \xi\in 2^{-1}\mathcal O_+\\
+              2\xi\in R
+            }}
+            a_\xi e(\xi z)
+          \)
+        </div>
+
+        <div class="research-formula">
+          \(
+            \displaystyle
+            \frac{\sqrt X}{\log X}
+          \)
+        </div>
+
+        <div class="research-formula">
+          \(
+            \operatorname{Sel}_{\ell}(E^d/F)=0
+          \)
+        </div>
+
+      </div>
+
+      <!-- Selmer exact sequence -->
+
+      <div class="research-exact-sequence">
+        <span>
+          \(
+            \displaystyle
+            0\longrightarrow
+            \frac{E(F)}{\ell E(F)}
+            \longrightarrow
+            \operatorname{Sel}_{\ell}(E/F)
+            \longrightarrow
+            \text{Ш}(E/F)[\ell]
+            \longrightarrow 0
+          \)
+        </span>
+      </div>
+
+    </section>
+
+    <div class="page-body">
+
+      <!-- Research interests -->
+
+      <section class="section-block" aria-labelledby="topics">
+
+        <h2 id="topics">Research interests</h2>
+
+        <div class="research-grid">
+
+          <article class="research-card">
+            <span class="number">01</span>
+
+            <h3>Class numbers</h3>
+
+            <p>
+              CM quadratic extensions, relative class numbers,
+              and arithmetic properties of number fields.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="number">02</span>
+
+            <h3>Elliptic curves</h3>
+
+            <p>
+              Quadratic twists, Selmer groups,
+              and related questions in arithmetic geometry.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="number">03</span>
+
+            <h3>Modular forms</h3>
+
+            <p>
+              Hilbert modular forms, half-integral weight forms,
+              and their arithmetic applications.
+            </p>
+          </article>
+
+        </div>
+
       </section>
+
+      <!-- Publications and preprints -->
+
       <section class="section-block" aria-labelledby="papers">
+
         <h2 id="papers">Publications &amp; preprints</h2>
-        
-<article>
-  <h3>1. Selmer groups of CM-twists of elliptic curves</h3>
-  <p>Olivia Beckwith and Tùng Hoàng</p>
-  <p>
-    <a href="https://arxiv.org/abs/2609.23847" target="_blank">[arXiv]</a>
-    <a href="https://arxiv.org/pdf/2609.23847" target="_blank">[PDF]</a>
-  </p>
-</article>
 
-<hr>
+        <article>
 
-<article>
-  <h3>2. Relative class numbers of CM extensions</h3>
-  <p>Tùng Hoàng</p>
-  <p><em>Preprint, 2026.</em></p>
-  <p>
-  </p>
-</article>
+          <h3>
+            1. Selmer groups of CM-twists of elliptic curves
+          </h3>
+
+          <p>Olivia Beckwith and Tùng Hoàng</p>
+
+          <p>
+            <a href="https://arxiv.org/abs/2609.23847"
+               target="_blank"
+               rel="noopener noreferrer">[arXiv]</a>
+
+            <a href="https://arxiv.org/pdf/2609.23847"
+               target="_blank"
+               rel="noopener noreferrer">[PDF]</a>
+          </p>
+
+        </article>
+
+        <hr>
+
+        <article>
+
+          <h3>2. Relative class numbers of CM extensions</h3>
+
+          <p>Tùng Hoàng</p>
+
+          <p><em>Preprint, 2026.</em></p>
+
+        </article>
 
       </section>
+
     </div>
+
   </main>
+
   <footer>
+
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Tung Hoang · Tulane University</p>
-      <a href="https://github.com/tunghoangmath" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+
+      <p>
+        © <span id="year">2026</span>
+        Tùng Hoàng · Tulane University
+      </p>
+
+      <a href="https://github.com/tunghoangmath"
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub profile
+      </a>
+
     </div>
+
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
