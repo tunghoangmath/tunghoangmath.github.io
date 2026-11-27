@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- MathJax for mathematical formulas -->
+  <!-- MathJax -->
   <script defer
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
   </script>
@@ -69,13 +69,15 @@
       color: #b5cec0;
       opacity: 0.78;
       font-size: 15px;
+      line-height: 1.5;
       text-align: center;
       min-width: 0;
     }
 
     .research-formula {
-      padding: 3px 0;
-      overflow-x: auto;
+      padding: 6px 0;
+      min-width: 0;
+      overflow: visible;
     }
 
     .research-formula.wide {
@@ -90,8 +92,10 @@
       color: #b5cec0;
       opacity: 0.78;
       font-size: 15px;
-      padding-top: 8px;
-      overflow-x: auto;
+      line-height: 1.5;
+      padding: 8px 0;
+      min-width: 0;
+      overflow: visible;
     }
 
     .research-exact-sequence span {
@@ -100,9 +104,24 @@
       min-width: 100%;
     }
 
+    /* Hide scrollbars */
+
+    .research-formula,
+    .research-exact-sequence {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .research-formula::-webkit-scrollbar,
+    .research-exact-sequence::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
     /* Responsive design */
 
-    @media (max-width: 760px) {
+    @media (max-width: 960px) {
 
       .page-intro.research-hero {
         grid-template-columns: 1fr;
@@ -124,7 +143,13 @@
       }
 
       .research-exact-sequence {
-        font-size: 12px;
+        font-size: 13px;
+      }
+
+      .research-formula,
+      .research-exact-sequence {
+        overflow-x: auto;
+        overflow-y: hidden;
       }
     }
 
@@ -132,6 +157,10 @@
 
       .research-formulas {
         grid-template-columns: 1fr;
+      }
+
+      .research-exact-sequence {
+        font-size: 12px;
       }
 
     }
